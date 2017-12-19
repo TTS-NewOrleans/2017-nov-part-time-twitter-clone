@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'profiles/:id' => 'profiles#show', as: :profile
 
   resources :tweets
+  resources :relationships
   devise_for :users
 
   root 'tweets#index'
